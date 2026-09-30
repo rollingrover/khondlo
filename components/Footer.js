@@ -51,20 +51,17 @@ export default async function Footer() {
               <li>{BUSINESS.postal}, {BUSINESS.city} {BUSINESS.postalCode}</li>
             </ul>
           </div>
+          <div>
+            <h2>{t('partners')}</h2>
+            <ul>
+              {PARTNERS.map((p) => (
+                <li key={p.url}>
+                  <a href={p.url} target="_blank" rel="noopener">{p.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <section className="footer__partners" aria-labelledby="footer-partners">
-          <h2 id="footer-partners">{t('partners')}</h2>
-          <ul>
-            {PARTNERS.map((p) => (
-              <li key={p.url}>
-                <a href={p.url} target="_blank" rel="noopener">
-                  <span className="footer__partner-name">{p.name}</span>
-                  <span className="footer__partner-domain">{p.domain}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
         <div className="footer__base">
           <span>© {year} {BUSINESS.legalName}. {t('rights')}</span>
           <span className="footer__credit">

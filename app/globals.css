@@ -306,18 +306,14 @@ h4 { font-size: var(--step-1); }
 .footer a { text-decoration: none; }
 .footer a:hover { text-decoration: underline; }
 .footer__grid { display: grid; gap: 2.5rem; }
-@media (min-width: 860px) { .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1.2fr; } }
+@media (min-width: 700px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .footer__grid { grid-template-columns: 1.3fr .8fr 1.1fr 1.2fr 1.2fr; } }
 .footer__logo { background: #fff; display: inline-block; padding: .75rem 1rem; border-radius: 6px; margin-bottom: 1rem; }
 .footer__logo img { width: 150px; }
 .footer h2 { font-size: var(--step-0); color: var(--sun); letter-spacing: 0; margin-bottom: 1rem; }
 .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
-.footer__partners { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.15); }
-.footer__partners ul { display: grid; gap: 1rem 2rem; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); }
-.footer__partners a { display: grid; gap: .1rem; }
-.footer__partner-name { font-weight: 700; color: #f1f5ec; }
-.footer__partner-domain { font-size: var(--step--1); opacity: .7; }
 .footer__base {
-  margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.15);
+  margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.15);
   display: grid; gap: .75rem; font-size: var(--step--1); text-align: center;
 }
 .footer__base > span { opacity: .85; }
