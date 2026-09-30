@@ -273,7 +273,9 @@
     "explore": "Explore",
     "toursCol": "Tours",
     "contactCol": "Contact",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "partners": "Partners",
+    "webDesign": "Web design by <link>RollingRover Productions</link>"
   },
   "notFound": {
     "title": "This path doesn’t lead anywhere",

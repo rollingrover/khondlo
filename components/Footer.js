@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import { BUSINESS, whatsappLink } from '@/lib/site';
+import { BUSINESS, PARTNERS, DESIGNER, whatsappLink } from '@/lib/site';
 import { TOURS } from '@/lib/tours';
 
 export default async function Footer() {
@@ -52,9 +52,29 @@ export default async function Footer() {
             </ul>
           </div>
         </div>
+        <section className="footer__partners" aria-labelledby="footer-partners">
+          <h2 id="footer-partners">{t('partners')}</h2>
+          <ul>
+            {PARTNERS.map((p) => (
+              <li key={p.url}>
+                <a href={p.url} target="_blank" rel="noopener">
+                  <span className="footer__partner-name">{p.name}</span>
+                  <span className="footer__partner-domain">{p.domain}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
         <div className="footer__base">
           <span>© {year} {BUSINESS.legalName}. {t('rights')}</span>
-          <span>Reg. {BUSINESS.registration}</span>
+          <span className="footer__credit">
+            {t.rich('webDesign', {
+              link: (chunks) => (
+                <a href={DESIGNER.url} target="_blank" rel="noopener">{chunks}</a>
+              ),
+            })}
+          </span>
+          <span className="footer__reg">Reg. {BUSINESS.registration}</span>
         </div>
       </div>
     </footer>
