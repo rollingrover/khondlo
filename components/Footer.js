@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
+import SocialLinks from './SocialLinks';
 import { BUSINESS, PARTNERS, DESIGNER, whatsappLink } from '@/lib/site';
 import { TOURS } from '@/lib/tours';
 
@@ -20,6 +21,7 @@ export default async function Footer() {
               <Image src={BUSINESS.logo} alt="Khondlo Tours" width={720} height={376} sizes="150px" />
             </Link>
             <p>{t('tagline')}</p>
+            <SocialLinks />
           </div>
           <div>
             <h2>{t('explore')}</h2>

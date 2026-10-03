@@ -8,7 +8,7 @@ import { TOURS, fromPrice } from '@/lib/tours';
 import { dims } from '@/lib/images';
 import { BUSINESS, whatsappLink } from '@/lib/site';
 
-const HERO = '/images/tours/macabuzela-village-trail-hills.webp';
+const HERO = '/images/tours/zululand-sunrise-hero.webp';
 
 export default async function HomePage({ params: { locale } }) {
   setRequestLocale(locale);
@@ -26,7 +26,7 @@ export default async function HomePage({ params: { locale } }) {
       <section className="hero">
         <Image
           src={HERO}
-          alt="Guests walking a red-earth footpath towards the hills near Macabuzela village, Hluhluwe"
+          alt="Sunrise over the Zululand coastal forest near Hluhluwe and St Lucia"
           fill
           priority
           fetchPriority="high"
